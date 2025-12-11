@@ -1,25 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.IO;
+using System.Windows.Forms;
 using System.Xml.Serialization;
 
 namespace WindowsFormsApp1
 {
-    
     public partial class Ex01 : Form
     {
+       
         string path = @"D:\2 LTWIN\form.xml";
+
         public Ex01()
         {
             InitializeComponent();
-
+        
+            this.FormClosing += new FormClosingEventHandler(Ex01_FormClosing);
         }
 
         public void Write(InfoWindows iw)
@@ -29,6 +25,7 @@ namespace WindowsFormsApp1
             writer.Serialize(file, iw);
             file.Close();
         }
+
         public InfoWindows Read()
         {
             if (!File.Exists(path)) return null;
@@ -38,35 +35,32 @@ namespace WindowsFormsApp1
             file.Close();
             return iw;
         }
-        private void Ex01_Resize(object sender, EventArgs e)
+
+        private void Ex01_Load(object sender, EventArgs e)
         {
-            int width = this.Size.Width;
-            int height = this.Size.Height;
-            this.Text = width.ToString() + " - " + height.ToString();
+            InfoWindows iw = Read();
+            if (iw != null)
+            {
+                this.Width = iw.Width;
+                this.Height = iw.Height;
+                this.Location = iw.Location;
+            }
         }
 
-        // 2. Hàm này chỉ chạy khi bạn THẢ CHUỘT ra -> Lúc này mới Ghi file
-        private void Ex01_ResizeEnd(object sender, EventArgs e)
+        private void Ex01_FormClosing(object sender, FormClosingEventArgs e)
         {
-            InfoWindows iw = new InfoWindows();
-            iw.Width = this.Size.Width;
-            iw.Height = this.Size.Height;
-            iw.Location = this.Location;
-            Write(iw); // Chỉ lưu khi đã kéo xong
-        }
-
-        void Ex01_Load(object sender, System.EventArgs e)
-        {
-            int width = this.Size.Width;
-            int height = this.Size.Height;
-            this.Text = width.ToString() + " - " + height.ToString();
             InfoWindows iw = new InfoWindows();
             iw.Width = this.Size.Width;
             iw.Height = this.Size.Height;
             iw.Location = this.Location;
             Write(iw);
         }
-
+        private void Ex01_ResizeEnd(object sender, EventArgs e)
+        {
+            int width = this.Size.Width;
+            int height = this.Size.Height;
+            this.Text = width.ToString() + " - " + height.ToString();
+        }
     }
     public class InfoWindows
     {
@@ -74,5 +68,4 @@ namespace WindowsFormsApp1
         public int Height { get; set; }
         public Point Location { get; set; }
     }
-
 }

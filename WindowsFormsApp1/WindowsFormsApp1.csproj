@@ -52,6 +52,72 @@
     <Compile Include="Ex01.Designer.cs">
       <DependentUpon>Ex01.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ex02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ex02.Designer.cs">
+      <DependentUpon>Ex02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ex03.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ex03.Designer.cs">
+      <DependentUpon>Ex03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ex04.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ex04.Designer.cs">
+      <DependentUpon>Ex04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ex05.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ex05.Designer.cs">
+      <DependentUpon>Ex05.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ex06.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ex06.Designer.cs">
+      <DependentUpon>Ex06.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ex07.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ex07.Designer.cs">
+      <DependentUpon>Ex07.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ex08.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ex08.Designer.cs">
+      <DependentUpon>Ex08.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ex09.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ex09.Designer.cs">
+      <DependentUpon>Ex09.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ex10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ex10.Designer.cs">
+      <DependentUpon>Ex10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ex11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ex11.Designer.cs">
+      <DependentUpon>Ex11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ex12.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ex12.Designer.cs">
+      <DependentUpon>Ex12.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +128,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Ex01.resx">
       <DependentUpon>Ex01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ex02.resx">
+      <DependentUpon>Ex02.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

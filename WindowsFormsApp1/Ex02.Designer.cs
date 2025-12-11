@@ -1,15 +1,12 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Ex01
+    partial class Ex02
     {
         private System.ComponentModel.IContainer components = null;
 
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
+            if (disposing && (components != null)) components.Dispose();
             base.Dispose(disposing);
         }
 
@@ -19,17 +16,16 @@
         {
             this.SuspendLayout();
             // 
-            // Ex01
+            // Ex02
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(500, 300);
-            this.Name = "Ex01";
-            this.Text = "Ex01";
-            this.Load += new System.EventHandler(this.Ex01_Load);
-            this.ResizeEnd += new System.EventHandler(this.Ex01_ResizeEnd);
+            this.ClientSize = new System.Drawing.Size(448, 304);
+            this.Name = "Ex02";
+            this.Text = "Form1";
+            this.KeyPreview = true; 
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Ex02_KeyUp);
             this.ResumeLayout(false);
-
         }
 
         #endregion
