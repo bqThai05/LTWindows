@@ -118,6 +118,66 @@
     <Compile Include="Ex12.Designer.cs">
       <DependentUpon>Ex12.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ex13.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ex13.Designer.cs">
+      <DependentUpon>Ex13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ex14.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ex14.Designer.cs">
+      <DependentUpon>Ex14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ex15.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ex15.Designer.cs">
+      <DependentUpon>Ex15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ex16.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ex16.Designer.cs">
+      <DependentUpon>Ex16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ex17.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ex17.Designer.cs">
+      <DependentUpon>Ex17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ex18.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ex18.Designer.cs">
+      <DependentUpon>Ex18.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ex19.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ex19.Designer.cs">
+      <DependentUpon>Ex19.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ex20.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ex20.Designer.cs">
+      <DependentUpon>Ex20.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ex21.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ex21.Designer.cs">
+      <DependentUpon>Ex21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ex22.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ex22.Designer.cs">
+      <DependentUpon>Ex22.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +216,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

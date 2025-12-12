@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections; // Nhớ dòng này để dùng ArrayList
 using System.Windows.Forms;
-
 
 namespace WindowsFormsApp1
 {
@@ -18,49 +11,62 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        // Hàm tạo dữ liệu giả lập y chang ảnh
+        public ArrayList GetData()
+        {
+            ArrayList lst = new ArrayList();
+
+            Song s = new Song();
+            s.Id = 53418;
+            s.Name = "Giấc mơ cha pi";
+            s.Author = "Trần Tiến";
+            lst.Add(s);
+
+            s = new Song();
+            s.Id = 52616;
+            s.Name = "Đôi mắt pleiku";
+            s.Author = "Nguyễn Cường";
+            lst.Add(s);
+
+            s = new Song();
+            s.Id = 51172;
+            s.Name = "Em muốn sống bên anh trọn đời";
+            s.Author = "Nguyễn Cường";
+            lst.Add(s);
+
+            return lst;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            ArrayList lst = GetData();
+            lbSong.DataSource = lst;
+            lbSong.DisplayMember = "Name"; // Chỉ hiển thị Tên bài hát
+        }
+
         private void btSelect_Click(object sender, EventArgs e)
         {
-            // Kiểm tra xem có chọn bài nào không
+            // Kiểm tra xem có đang chọn bài nào không để tránh lỗi
             if (lbSong.SelectedItem != null)
             {
-                string song = lbSong.SelectedItem.ToString();
-                lbFavorite.Items.Add(song);
-                lbSong.Items.RemoveAt(lbSong.SelectedIndex);
-            }
-        }
+                // Ép kiểu item đang chọn về Class Song
+                Song song = (Song)lbSong.SelectedItem;
 
-        private void lbSong_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            // Code giống hệt ảnh cuối cùng Article 17
-            int index = this.lbSong.IndexFromPoint(e.Location);
-            if (index != System.Windows.Forms.ListBox.NoMatches)
-            {
-                string song = lbSong.Items[index].ToString();
-                lbFavorite.Items.Add(song);
-                lbSong.Items.RemoveAt(lbSong.SelectedIndex); // Dòng này trong ảnh dùng SelectedIndex
-            }
-        }
+                string id = song.Id.ToString();
+                string name = song.Name;
+                string author = song.Author;
 
-        private void lbFavorite_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            int index = this.lbFavorite.IndexFromPoint(e.Location);
-            if (index != System.Windows.Forms.ListBox.NoMatches)
-            {
-                string song = lbFavorite.Items[index].ToString();
-                lbSong.Items.Add(song);
-                lbFavorite.Items.RemoveAt(lbFavorite.SelectedIndex);
+                // Nối chuỗi và thêm vào list bên phải y chang ảnh
+                lbFavorite.Items.Add(id + " - " + name + " - " + author);
             }
         }
+    }
 
-        private void btSelectAll_Click(object sender, EventArgs e)
-        {
-            // Vòng lặp ngược như ảnh cuối cùng (i--) để không bị lỗi Index
-            for (int i = lbSong.Items.Count - 1; i >= 0; i--)
-            {
-                string song = lbSong.Items[i].ToString();
-                lbFavorite.Items.Add(song);
-                lbSong.Items.RemoveAt(i);
-            }
-        }
+    // Class Song nằm ở đây luôn cho tiện
+    public class Song
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Author { get; set; }
     }
 }

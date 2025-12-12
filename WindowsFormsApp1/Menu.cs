@@ -129,5 +129,85 @@ namespace WindowsFormsApp1
             form.ShowDialog();
             this.Show();
         }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Ex13 form = new Ex13();
+            form.ShowDialog();
+            this.Show();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Ex14 form = new Ex14();
+            form.ShowDialog();
+            this.Show();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Ex15 form = new Ex15();
+            form.ShowDialog();
+            this.Show();
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Ex16 form = new Ex16();
+            form.ShowDialog();
+            this.Show();
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Ex17 form = new Ex17();
+            form.ShowDialog();
+            this.Show();
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Ex18 form = new Ex18();
+            form.ShowDialog();
+            this.Show();
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Ex19 form = new Ex19();
+            form.ShowDialog();
+            this.Show();
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Ex20 form = new Ex20();
+            form.ShowDialog();
+            this.Show();
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Ex21 form = new Ex21();
+            form.ShowDialog();
+            this.Show();
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Ex22 form = new Ex22();
+            form.ShowDialog();
+            this.Show();
+        }
     }
 }
