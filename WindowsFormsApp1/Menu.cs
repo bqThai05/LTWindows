@@ -209,5 +209,13 @@ namespace WindowsFormsApp1
             form.ShowDialog();
             this.Show();
         }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Ex23 form = new Ex23();
+            form.ShowDialog();
+            this.Show();
+        }
     }
 }
